@@ -1,0 +1,139 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: Tilt Prism;
+    background: url(gg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: ghostwhite;
+}
+
+hr {
+    margin: 20px auto;
+    color: whitesmoke;
+    border: 3px solid whitesmoke;
+    max-width: 65px;
+    opacity: 1;
+}
+
+.btn {
+    border-radius: 10px;
+}
+
+.buffer {
+    height: 50px;
+}
+
+.btn-outline-light {
+    background-color: slategray;
+    border-color: lightyellow;
+}
+
+.text span {
+    font-size: 60px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    color: #fff;
+    animation: zoomup 2s linear infinite;
+    animation-delay: calc(200ms * var(--i));
+}
+
+@keyframes zoomup {
+
+    0%,
+    100% {
+        color: #a71622;
+        filter: blur(1px);
+        text-shadow: 0 0 10px #a71622, 0 0 20px #a71622, 0 0 30px #a71622,
+            0 0 40px #a71622, 0 0 60px #a71622, 0 0 80px #a71622, 0 0 100px #a71622,
+            0 0 120px #a71622;
+    }
+
+    5%,
+    80% {
+        filter: blur(0);
+        color: #fff;
+        text-shadow: none;
+    }
+}
+
+.gif-image {
+    width: 90px;
+    height: auto;
+    margin: 0px auto;
+}
+
+
+
+
+  a {
+    font-family: "Helvetica";
+    font-weight: 700;
+    color: whitesmoke;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+  }
+  
+  body {
+    background-color: black;
+  }
+  
+  .block {
+    background:linear-gradient(180deg, #000000, #111111);
+    position: relative;
+    width: 300px;
+  
+    padding: 1rem;
+    margin: 10% auto;
+    border-radius: 30px;
+    border: 1px solid whitesmoke;
+  }
+  
+  .glow::before, glow::after {
+    content:'';
+    position:absolute;
+    left: -5px;
+    top: -5px;
+    background: linear-gradient(45deg, #993333, #ff00ff, #6e0dd0, #099fff, #ff00 ,#993333);
+    background-size: 400%;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    z-index: -1;
+    animation: animate 20s linear infinite;
+    
+    
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .glow::before {
+    filter: blur(20px);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .glow:hover::before {
+    opacity: 100;
+  }
